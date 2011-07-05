@@ -85,7 +85,7 @@ function EventEmitter() {
 			
 			// Loop over the listeners executing them
 			for(i = 0; i < listeners[eventName].length; i += 1) {
-				listeners[eventName][i].apply(null, args);
+				listeners[eventName][i].apply(instance, args);
 			}
 		}
 		
